@@ -1,0 +1,78 @@
+@import "../variables"
+    
+.typesBG
+    background-color: $main-color
+    max-height: 520px
+    width: 100%
+    padding: 70px 50px 140px 50px
+    p
+        font-size: 37px
+        font-family: comfortaa, sans-serif
+        color: #333333
+        margin-left: 300px
+
+.types
+    display: flex
+    justify-content: center
+
+        
+
+.pasteType
+    width: 290px
+    height: 290px
+    margin: 50px 25px
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        width: 118%
+        margin-left: -9%
+        height: 5px
+        background-color: white
+        bottom: -20px
+        transition: 0.5s
+    &::after
+        content: ''
+        position: absolute
+        width: 0
+        margin-left: 50%
+        height: 5px
+        background-color: #1d87c5
+        bottom: -20px
+        transition: 0.5s
+    &:hover::after
+        width: 118%
+        margin-left: -9%
+    &:focus::after
+        width: 118%
+        margin-left: -9%
+        background-color: #175375
+    &:nth-child(1)
+        background: url("../../img/Пельмени.png") center center/cover no-repeat
+    &:nth-child(2)
+        background: url("../../img/Хинкали.png") center center/cover no-repeat
+    &:nth-child(3)
+        background: url("../../img/Вареники.png") center center/cover no-repeat
+    &:nth-child(4)
+        background: url("../../img/Курзе.png") center center/cover no-repeat
+
+@media(max-width: 600px)
+    .typesBG
+        padding: 30px 10% 30px 10%
+        p
+            font-size: 22px
+            margin-left: 0
+    .pasteType
+        width: 20vw
+        height: 20vw
+        margin: 20px 0
+        &::before
+            width: 100%
+            margin-left: 0
+        &:hover::after
+            width: 100%
+            margin-left: 0
+        &:focus::after
+            width: 100%
+            margin-left: 0
+            

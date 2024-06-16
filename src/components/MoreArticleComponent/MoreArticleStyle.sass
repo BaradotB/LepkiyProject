@@ -1,0 +1,55 @@
+@import "../variables"
+
+.articles
+    background-color: $main-color
+    min-height: 370px
+    width: 100%
+    padding: 70px 0px 70px 300px
+    display: flex
+    p
+        font-family: inter, sans-serif
+        font-size: 38px
+        font-weight: light
+        margin-right: 180px
+        margin-bottom: 50px
+    a
+        text-decoration: none
+        margin-right: 100px
+    &_one
+        height: 230px
+        width: 340px
+        border-top: 1px solid black
+        border-bottom: 1px solid black
+        display: flex
+        &_img
+            width: 200px
+            height: 200px
+            background: url("../../img/firstArticle.jpg") center/cover
+            margin: 16px 0
+        &_text
+            width: 140px
+            font-family: inter, sans-serif
+            font-size: 19px
+            text-align: right   
+            margin-top: 16px
+            color: black
+            margin-left: auto
+.secondArticle
+    background: url("../../img/secondArticle.jpg") center/cover
+
+@media(max-width: 1450px)
+    .articles
+        display: block
+        padding-left: 10%
+        padding-top: 30px
+        p
+            font-size: 25px
+            margin-bottom: 20px
+        &_one
+            height: 170px
+            width: 80vw
+            &_img
+                height: 140px
+                margin-right: 5%
+            &_text
+                font-size: 14px
